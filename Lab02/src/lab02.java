@@ -4,13 +4,14 @@ import java.lang.Math;
 public class lab02 {
 	
 	Scanner p = new Scanner(System.in);
+	private static Scanner s;
 	
 	  public static void multiply()
 	    {
 	        // Please write your code after this line
 		  
-		  Scanner s = new Scanner(System.in);
-		  int num1, num2, res, j, i;
+		  s = new Scanner(System.in);
+		  int res, j, i;
 		  System.out.print("Enter number of operations: ");
 		  j = s.nextInt();
 		  if(j<=0){
@@ -18,7 +19,6 @@ public class lab02 {
 			  j = s.nextInt();
 		  	}
 		  
-		  String[] inst = {"num1", "num2"};
 		  int[] nums = new int[j];
 		  
 		  for(i = 0; i < j; i++){
@@ -41,8 +41,8 @@ public class lab02 {
 	    public static void calculateTriangleArea()
 	    {
 	        // Please write your code after this line
-	    	Scanner s = new Scanner(System.in);
-	        float width, height, area;
+	    	s = new Scanner(System.in);
+	        float area;
 	        int i;
 	        String[] inst={"Enter the width of the triangle: ","Enter the height of the triangle: "};
 	        float[] sides = new float[2];
@@ -61,9 +61,7 @@ public class lab02 {
 	    public static void solveQuadraticEquation()
 	    {
 	        // Please write your code after this line
-	    	Scanner s = new Scanner(System.in);
-	    	//float  
-	    	double x1, x2;
+	    	s = new Scanner(System.in);
 	    	int i, j = 0;
 	    	String[] sides ={"a", "b", "c", "x1", "x2"};
 	    	double[] sidesnum = new double[3];
@@ -84,7 +82,7 @@ public class lab02 {
 	    
 public static void main(String[] args){
 	
-	Scanner s = new Scanner(System.in);
+	s = new Scanner(System.in);
 	int menu;
 	
 	System.out.println("** Lab02 - Math Demo**");
