@@ -11,8 +11,13 @@ public class lab02 {
 		  
 		  Scanner s = new Scanner(System.in);
 		  int num1, num2, res, j, i;
-		  System.out.print("How many numbers?: ");
+		  System.out.print("Enter number of operations: ");
 		  j = s.nextInt();
+		  if(j<=0){
+			  System.out.print("Number not Valid.\nTry Again\nEnter number of operations: ");
+			  j = s.nextInt();
+		  	}
+		  
 		  String[] inst = {"num1", "num2"};
 		  int[] nums = new int[j];
 		  
@@ -25,7 +30,10 @@ public class lab02 {
 			  res = res * nums[i];
 		  }
 		  for(i = 0; i < j; i++){
-			  System.out.print(nums[i]+" * ");
+			  if(j==1){
+				  System.out.print(nums[i]);
+			  }
+			  else System.out.print(nums[i]+" * ");
 		  }
 		  System.out.print(" = "+res);
 	    }
