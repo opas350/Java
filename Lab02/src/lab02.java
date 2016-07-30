@@ -17,7 +17,7 @@ public class lab02 {
 		  int[] nums = new int[j];
 		  
 		  for(i = 0; i < j; i++){
-			  System.out.print("Enter num" + i + ": ");
+			  System.out.print("Enter num" + (i+1) + ": ");
 			  nums[i] = s.nextInt();
 		  }
 		  res = nums[0];
