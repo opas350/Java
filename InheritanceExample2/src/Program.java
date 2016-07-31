@@ -16,3 +16,10 @@ public class Program {
 	}
 
 }
+
+/*
+ * 	Output
+ *  New A
+ *  New B
+ * 
+ */
