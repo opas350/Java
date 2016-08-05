@@ -250,50 +250,50 @@ public class BankAccount {
 		users_obj.remove(username);
 		System.out.println("User " + name + " Deleted");
 	}
-	
+
 	/**
 	 * 
 	 * Method for exporting the  DB to a external file
 	 * @param args
 	 */
-	
+
 	public static void exportDB(String filename){
-		
+
 		final String COMMA_DELIMITER = ",";
 		final String NEW_LINE_SEPARATOR = "\n";
-		
+
 		final String FILE_HEADER = "UserName, Balance";
-		
+
 		FileWriter fileWriter = null;
-		
+
 		try{
 			fileWriter = new FileWriter(filename);
-			
+
 			fileWriter.append(FILE_HEADER.toString());
 			fileWriter.append(NEW_LINE_SEPARATOR);
-			
+
 			for(int i=0; i <users_obj.size(); i++) {
 				fileWriter.append(users_obj.get(i).owner);
 				fileWriter.append(COMMA_DELIMITER);
 				fileWriter.append("$"+String.valueOf(users_obj.get(i).balance));
 				fileWriter.append(NEW_LINE_SEPARATOR);
 			}
-			
+
 			System.out.println("File Created Sucessfully");
-			
+
 		} catch(Exception e){
 			System.out.println("Error... File not created");
 			e.printStackTrace();
-	}finally {
-		try {
-			fileWriter.flush();
-			fileWriter.close();
-		} catch(IOException e){
-			System.out.println("Error while Flushing/closing DW");
-			e.printStackTrace();
+		}finally {
+			try {
+				fileWriter.flush();
+				fileWriter.close();
+			} catch(IOException e){
+				System.out.println("Error while Flushing/closing DW");
+				e.printStackTrace();
+			}
 		}
-	}
-		
+
 	}
 	public static void main(String[] args){
 		Scanner s = new Scanner(System.in);
@@ -401,7 +401,7 @@ public class BankAccount {
 				user_name = s.next();
 				RemoveUser(user_name);
 			}
-			
+
 			else if(menu_sel == 6){
 				exportDB("DBcvs");
 			}
