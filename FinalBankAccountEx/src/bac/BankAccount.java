@@ -13,9 +13,13 @@ import java.io.FileWriter;
  */
 
 /*
- * First attempt of using the Array List to create an Array of unknown size.
+ *
+ * 	To run on CMD -  verify if java is installed 
+ *   -->  java -version
+ *   
+ *   After run the Jar file
+ *   -->  java	-jar FILENAME.jar
  * 
- * http://stackoverflow.com/questions/15423483/how-to-create-an-arraylist-class-that-can-store-multiple-objects
  */
 public class BankAccount {
 
